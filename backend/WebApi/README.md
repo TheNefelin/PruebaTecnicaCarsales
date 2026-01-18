@@ -1,4 +1,4 @@
-﻿# WebApi
+﻿# Backend WebApi .NET 8
 
 API REST desarrollada en **ASP.NET Core (.NET 8)** que expone endpoints para consumir y transformar datos provenientes de una API externa.
 
@@ -37,5 +37,3 @@ appsettings.json
 CORS está habilitado para permitir el consumo desde el frontend Angular.
 
 ---
-
-Este proyecto actúa como capa de orquestación y exposición HTTP.

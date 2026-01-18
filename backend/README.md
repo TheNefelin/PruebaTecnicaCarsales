@@ -1,68 +1,39 @@
-﻿# Prueba Técnica Carsales
+﻿# Backend WebApi .NET 8
 
-Solución fullstack desarrollada como prueba técnica, compuesta por un backend en **.NET 8** y un frontend en **Angular 18**, consumiendo datos desde la API pública de Rick and Morty.
+API REST desarrollada en **ASP.NET Core (.NET 8)** que expone endpoints para consumir y transformar datos provenientes de una API externa.
 
-## Tecnologías
+## Endpoints principales
 
-* Backend: .NET 8, ASP.NET Core Web API
-* Frontend: Angular 18 (Standalone, Signals)
-* Estilos: CSS puro (sin frameworks)
-* API externa: Rick and Morty API
-
-## Estructura del repositorio
-
-* `WebApi`: API REST
-* `ClassLibrary_Domain`: Entidades de dominio
-* `ClassLibrary_Application`: Lógica de aplicación y contratos
-* `ClassLibrary_Infrastructure`: Integración con APIs externas
-* `Frontend`: Aplicación Angular
-
-## Cómo ejecutar el proyecto
-
-### Backend
-
-1. Abrir la solución en Visual Studio
-2. Ejecutar el proyecto `WebApi`
-3. La API quedará disponible en:
-
-   ```
-   https://localhost:7240
-   ```
-- Opcional por consola
-```sh
-dotnet restore
-dotnet run
-```
-
-### Frontend
-
-```bash
-cd Frontend
-npm install
-ng serve
-```
-
-La aplicación estará disponible en:
+### Obtener episodios paginados
 
 ```
-http://localhost:4200
+GET /api/episode?page={number}
 ```
 
-## Funcionalidades
+Respuesta:
 
-* Listado paginado de episodios
-* Consumo de API externa
-* Manejo de errores
-* Arquitectura desacoplada
-* Uso de features modernas de Angular
+* Página actual
+* Total de páginas
+* Lista de episodios
+
+## Manejo de errores
+
+* Errores de conexión con la API externa
+* Respuestas inválidas
+* Páginas inexistentes
+
+Los errores son propagados correctamente como respuestas HTTP.
+
+## Configuración
+
+La URL de la API externa se configura en:
+
+```
+appsettings.json
+```
+
+## CORS
+
+CORS está habilitado para permitir el consumo desde el frontend Angular.
 
 ---
-
-Este proyecto fue desarrollado siguiendo principios SOLID y buenas prácticas.
-
-## Documentación técnica
-
-[]()
-[]()
-[]()
-[]()
