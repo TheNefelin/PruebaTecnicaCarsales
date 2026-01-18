@@ -1,0 +1,45 @@
+<div class="table-wrapper">
+
+  <!-- Filtro -->
+  <input
+    type="text"
+    placeholder="Filter by episode name..."
+    (input)="onFilterChange($any($event.target).value)"
+  />
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Fecha estreno</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (ep of episodes(); track ep.id) {
+          <tr (click)="openDetail(ep.id)">
+            <td>{{ ep.code }}</td>
+            <td>{{ ep.name }}</td>
+            <td>{{ ep.airDate }}</td>
+          </tr>
+        }
+
+        @if (episodes().length === 0) {
+          <tr>
+            <td colspan="3">No results</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Paginación -->
+  <footer class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage() === 1">◀</button>
+    <span>{{ currentPage() }} / {{ totalPages() }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage() === totalPages()">▶</button>
+  </footer>
+
+</div>

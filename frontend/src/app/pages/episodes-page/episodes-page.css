@@ -1,0 +1,16 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.page-content {
+  flex: 1;
+  overflow: hidden;
+}

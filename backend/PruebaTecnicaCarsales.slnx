@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="ClassLibrary_Application/ClassLibrary_Application.csproj" Id="f04d2576-de54-443f-b633-c405bbf7afad" />
+  <Project Path="ClassLibrary_Domain/ClassLibrary_Domain.csproj" Id="4075885d-b155-49f8-b47e-1e985cb0731f" />
+  <Project Path="ClassLibrary_Infrastructure/ClassLibrary_Infrastructure.csproj" Id="2518169e-51ba-41ef-ba68-19923096eb05" />
+  <Project Path="WebApi/WebApi.csproj" Id="02d99e71-1145-4439-b5e0-6e72eb2cc091" />
+</Solution>
