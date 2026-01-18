@@ -63,7 +63,5 @@ Este proyecto fue desarrollado siguiendo principios SOLID y buenas prácticas.
 
 ## Documentación técnica
 
-[]()
-[]()
-[]()
-[]()
+[Frontend - Angular](frontend/README.md)
+[Backend - WebApi](backend/README.md)
