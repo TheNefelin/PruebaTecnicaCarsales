@@ -25,8 +25,4 @@ export class EpisodeService {
       { params }
     );
   }
-
-  getEpisodesById(id: number = 1): Observable<PagedResult<Episode>> {
-    return this.http.get<PagedResult<Episode>>(`${this.baseUrl}/${id}`);
-  }
 }

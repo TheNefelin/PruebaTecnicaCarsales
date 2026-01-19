@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class EpisodeTable implements OnInit {
 
-   episodes = signal<Episode[]>([]);
+  episodes = signal<Episode[]>([]);
   currentPage = signal(1);
   totalPages = signal(1);
   filterName = signal('');
@@ -53,9 +53,5 @@ export class EpisodeTable implements OnInit {
     if (this.currentPage() > 1) {
       this.loadEpisodes(this.currentPage() - 1);
     }
-  }
-
-  openDetail(id: number) {
-    this.router.navigate(['/episodes', id]);
   }
 }
